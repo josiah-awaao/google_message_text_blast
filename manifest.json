@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Google Messages Blaster",
+  "version": "1.0",
+  "description": "Send bulk messages via Google Messages Web.",
+  "permissions": ["storage", "scripting", "activeTab"],
+  "host_permissions": ["https://messages.google.com/web/conversations*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://messages.google.com/web/conversations*"],
+      "js": ["content.js"]
+    }
+  ]
+}
