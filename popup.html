@@ -3,15 +3,18 @@
 <head>
     <title>Text Blaster</title>
     <style>
-        body { font-family: Arial, sans-serif; padding: 10px; width: 200px; }
+        body { font-family: Arial, sans-serif; padding: 10px; width: 250px; }
         input, textarea, button { width: 100%; margin: 5px 0; }
     </style>
 </head>
 <body>
     <h3>Text Blaster</h3>
-    <input type="text" id="number" placeholder="Enter Phone Number">
+    <input type="text" id="number" placeholder="Enter Phone Number (comma-separated)">
     <textarea id="message" placeholder="Enter Message"></textarea>
+    <input type="number" id="delay" placeholder="Delay per message (seconds)">
     <button id="sendBtn">Send</button>
+    <input type="file" id="csvFile" accept=".csv">
+    <button id="sendCSVBtn">Send from CSV</button>
     <script src="popup.js"></script>
 </body>
 </html>
